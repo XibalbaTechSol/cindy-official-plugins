@@ -14,3 +14,7 @@ See the [comprehensive setup and reference](https://github.com/XibalbaTechSol/co
 - No third-party OAuth scopes or Cindy-host OAuth grants are used. No backend, database, profile, credentials, or third-party Node dependencies are bundled.
 
 Author: Xibalba Solutions LLC. Upstream MIT notice is preserved in `UPSTREAM-LICENSE.txt`; contributions to this official repository follow its Apache-2.0 contribution terms. Marketplace availability requires registry review and release approval.
+
+## Review fixes in 0.3.4
+
+Memory and opt-in capture capabilities remain available. File traversal rejects symlinks at every directory component using held directory descriptors. Explicit memory writes report known or unknown outcomes and require reconciliation before uncertain retries. All plugin-owned settings mutations use the resident writer; versioned page saves reject stale edits, while configuration checks preserve a concurrent pause. Successful snapshots survive later missing/error attempts and remain independently auditable. File work resumes within a message under a cooperative sweep budget and reuses unchanged successful snapshots after a secure metadata check. Individual blocked OS/backend operations cannot be preempted by that cooperative budget.
